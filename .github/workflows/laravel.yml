@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         uses: php-actions/composer@v6
         with:
-          command: install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+          command: install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
