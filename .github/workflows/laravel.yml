@@ -56,8 +56,8 @@ jobs:
         uses: atymic/deployer-php-action@master
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOST }}
       - name: Deploy to Prod
         env:
-          DOT_ENV: ${{ secrets.DOT_ENV }}
+          DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
         run: dep deploy production --tag=${{ env.GITHUB_REF }} -vvv
