@@ -25,4 +25,4 @@ jobs:
       - name: Deploy to Prod
         env:
           DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
-        run: dep deploy --tag=${{ env.GITHUB_REF }} -vvv
+        run: dep deploy production --tag=${{ env.GITHUB_REF }} -vvv
