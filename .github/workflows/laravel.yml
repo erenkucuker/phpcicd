@@ -12,12 +12,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Setup PHP
-        uses: shivammathur/setup-php@master
+        uses: shivammathur/setup-php@master@v2
         with:
           php-version: 7.4
-          extensions: mbstring, bcmath
       - name: Install Dependencies
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-dev
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
