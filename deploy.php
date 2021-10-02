@@ -30,11 +30,11 @@ task('deploy:secrets', function () {
   upload('.env', get('deploy_path') . '/shared');
 });
 
-host('18.195.115.161')
-  ->hostname('172.26.15.235')
+host('64.227.1.82')
+  ->hostname('dev')
   ->stage('production')
-  ->user('bitnami')
-  ->set('deploy_path', '~/htdocs')
+  ->user('api')
+  ->set('deploy_path', '~/webapps')
   ->set('sshOptions', [
   'StrictHostKeyChecking' => 'no',]);
 
