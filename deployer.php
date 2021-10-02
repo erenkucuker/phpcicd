@@ -34,7 +34,7 @@ host('myapp.io')
   ->hostname('18.195.115.161')
   ->stage('production')
   ->user('root')
-  ->set('deploy_path', '/var/www/my-app');
+  ->set('deploy_path', '~/htdocs');
 
 
 after('deploy:failed', 'deploy:unlock');
