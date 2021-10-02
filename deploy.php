@@ -33,7 +33,7 @@ task('deploy:secrets', function () {
 host('18.195.115.161')
   ->hostname('18.195.115.161')
   ->stage('production')
-  ->user('root')
+  ->user('bitnami')
   ->set('deploy_path', '~/htdocs');
 
 

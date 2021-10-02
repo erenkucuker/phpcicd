@@ -25,4 +25,4 @@ jobs:
       - name: Deploy to Prod
         env:
           DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
-        run: php vendor/bin/dep deploy 18.195.115.161
+        run: dep deploy --tag=${{ env.GITHUB_REF }} -vvv
