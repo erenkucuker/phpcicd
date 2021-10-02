@@ -33,7 +33,7 @@ task('deploy:secrets', function () {
 host('64.227.1.82')
   ->stage('production')
   ->user('api')
-  ->set('deploy_path', '~/webapps')
+  ->set('deploy_path', '~/webapps/api/try')
   ->set('sshOptions', [
   'StrictHostKeyChecking' => 'no',]);
 
