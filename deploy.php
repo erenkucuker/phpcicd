@@ -34,7 +34,9 @@ host('18.195.115.161')
   ->hostname('18.195.115.161')
   ->stage('production')
   ->user('bitnami')
-  ->set('deploy_path', '~/htdocs');
+  ->set('deploy_path', '~/htdocs')
+  ->set('sshOptions', [
+  'StrictHostKeyChecking' => 'no',]);
 
 
 after('deploy:failed', 'deploy:unlock');
