@@ -31,7 +31,7 @@ task('deploy:secrets', function () {
 });
 
 host('18.195.115.161')
-  ->hostname('18.195.115.161')
+  ->hostname('ip-172-26-15-235')
   ->stage('production')
   ->user('bitnami')
   ->set('deploy_path', '~/htdocs')
