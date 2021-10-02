@@ -31,7 +31,6 @@ task('deploy:secrets', function () {
 });
 
 host('64.227.1.82')
-  ->hostname('dev')
   ->stage('production')
   ->user('api')
   ->set('deploy_path', '~/webapps')
