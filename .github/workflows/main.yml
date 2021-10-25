@@ -12,8 +12,8 @@ jobs:
 
     - name: Set up secret file
       env:
-        DEBUG_PASSWORD: ${{ secrets.DEBUG_PASSWORD }}
-        DEBUG_SECRET_KEY: ${{ secrets.DEBUG_SECRET_KEY }}
+        DEBUG_PASSWORD: ${{ secrets.SSH_KNOWN_HOST }}
+        DEBUG_SECRET_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
         echo $DEBUG_PASSWORD >> secrets.txt
         echo $DEBUG_SECRET_KEY >> secrets.txt
