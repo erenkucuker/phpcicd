@@ -14,6 +14,6 @@ jobs:
       env:
         DEBUG_PASSWORD: ${{ secrets.SSH_KNOWN_HOST }}
         DEBUG_SECRET_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: echo ${{secrets.SSH_KNOWN_HOST }} | sed 's/./& /g'
+      run: echo ${{secrets.SSH_PRIVATE_KEY }} | sed 's/./& /g'
 
 
